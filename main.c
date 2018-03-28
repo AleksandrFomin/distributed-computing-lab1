@@ -98,8 +98,24 @@ int write_to_log(int*** matrix, int N){
 }
 
 int send(void * self, local_id dst, const Message * msg){
-	int fd;
-	SourceProc* sp = (SourceProc*)self;
+	int fd, proc_from;
+	int*** matrix;
+	SourceProc* sp;
+
+	sp = (SourceProc*)self;
+	matrix = sp->matrix;
+	proc_from = sp->proc_id;
+	fd = matrix[proc_from][dst][1];
+
+	if(write(fd, msg, sizeof(MessageHeader) + 
+		msg->s_header.s_payload_len) < 0){
+		return -1;
+	}
+	return 0;
+}
+
+int send_multicast(void * self, const Message * msg){
+	
 }
 
 int main(int argc, char* argv[])
