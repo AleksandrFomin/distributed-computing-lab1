@@ -1,30 +1,34 @@
-Process 1 (pid  2529, parent  2528) has STARTED
-Process 1 (pid  2529, parent  2528) has STARTED
-Process 1 (pid  2529, parent  2528) has STARTED
-Process 3 (pid  2531, parent  2528) has STARTED
-Process 2 (pid  2530, parent  2528) has STARTED
-Process 3 (pid  2531, parent  2528) has STARTED
-Process 2 (pid  2530, parent  2528) has STARTED
-Process 3 (pid  2531, parent  2528) has STARTED
-Process 2 (pid  2530, parent  2528) has STARTED
-Process 3 (pid  2531, parent  2528) has STARTED
+Process 1 (pid  9723, parent  9722) has STARTED
+Process 2 (pid  9724, parent  9722) has STARTED
+Process 1 (pid  9723, parent  9722) has STARTED
+Process 2 (pid  9724, parent  9722) has STARTED
+Process 1 (pid  9723, parent  9722) has STARTED
+Process 2 (pid  9724, parent  9722) has STARTED
+Process 3 (pid  9725, parent  9722) has STARTED
+Process 3 (pid  9725, parent  9722) has STARTED
+Process 3 (pid  9725, parent  9722) has STARTED
+Process 3 (pid  9725, parent  9722) has STARTED
+Process 0 received all STARTED messages
+Process 2 (pid  9724, parent  9722) has STARTED
+Process 3 (pid  9725, parent  9722) has STARTED
+Process 3 (pid  9725, parent  9722) has STARTED
 Process 1 received all STARTED messages
-Process 3 (pid  2531, parent  2528) has STARTED
-Process 2 (pid  2530, parent  2528) has STARTED
-Process 2 received all STARTED messages
-Process 1 has DONE its work
 Process 3 received all STARTED messages
+Process 2 received all STARTED messages
+Process 3 has DONE its work
 Process 2 has DONE its work
+Process 3 has DONE its work
+Process 1 has DONE its work
+Process 2 has DONE its work
+Process 2 has DONE its work
+Process 3 has DONE its work
 Process 1 has DONE its work
 Process 3 has DONE its work
-Process 2 has DONE its work
 Process 1 has DONE its work
 Process 3 has DONE its work
-Process 2 has DONE its work
-Process 3 has DONE its work
-Process 3 has DONE its work
-Process 3 has DONE its work
-Process 1 received all DONE messages
-Process 2 has DONE its work
+Process 0 received all DONE messages
 Process 2 received all DONE messages
+Process 3 has DONE its work
+Process 2 has DONE its work
+Process 1 received all DONE messages
 Process 3 received all DONE messages

@@ -119,7 +119,7 @@ int log_events(int fd, char* str){
 	if(write(fd, str, strlen(str)) < 0){
 		return -1;
 	}
-	printf("%s", str);
+	write(1, str,strlen(str));
 	return 0;
 }
 
@@ -277,7 +277,7 @@ int receive_all(void* self, MessageType type){
 	if(write(sp->fd, str, strlen(str)) < 0){
 		return -1;
 	}
-	printf("%s", str);
+	write(1, str,strlen(str));
 	return 0;
 }
 
@@ -335,7 +335,6 @@ int main(int argc, char* argv[])
 				if(first_phase(fds, proc_id, N, log_fd) < 0){
 					printf("First phase failed");
 				}
-				// sleep(1);
 				if(third_phase(fds, proc_id, N, log_fd) < 0){
 					printf("Third phase failed");
 				}
@@ -348,6 +347,12 @@ int main(int argc, char* argv[])
 
 	if(close_pipes(fds, N, PARENT_ID) < 0){
 		printf("Error closing pipe");
+	}
+	if(get_message(fds, PARENT_ID, N, log_fd, STARTED) < 0){
+		return -1;
+	}
+	if(get_message(fds, PARENT_ID, N, log_fd, DONE) < 0){
+		return -1;
 	}
 
 	for(i = 0; i < N; i++){
